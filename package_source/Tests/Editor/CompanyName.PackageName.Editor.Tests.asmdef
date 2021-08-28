@@ -1,0 +1,10 @@
+{
+    "name": "CompanyName.PackageName.Editor.Tests",
+    "rootNamespace": "CompanyName.PackageName",
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ]
+}

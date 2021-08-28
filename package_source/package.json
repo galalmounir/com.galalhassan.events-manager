@@ -1,0 +1,22 @@
+{
+  "name": "com.companyname.packagename",
+  "version": "0.0.1",
+  "displayName": "Package Name Goes Here",
+  "description": "A Description for the Package goes here",
+  "unity": "2021.1",
+  "author": {
+    "name": "Company Name / Package Author",
+    "email": "user@company.com",
+    "url": "http://www.yourcompanyname.com"
+  },
+  "samples": [
+    {
+      "displayName": "Template Sample",
+      "description": "Contains a sample of how to use this package.",
+      "path": "Samples~/Example1"
+    }
+  ],
+  "dependencies": {
+  }
+}
+  
