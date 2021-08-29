@@ -1,13 +1,13 @@
 {
-  "name": "com.companyname.packagename",
+  "name": "com.galalhassan.events-manager",
   "version": "0.0.1",
-  "displayName": "Package Name Goes Here",
-  "description": "A Description for the Package goes here",
+  "displayName": "Events Manager",
+  "description": "An Events Manager Package for reuse in different projects.",
   "unity": "2021.1",
   "author": {
-    "name": "Company Name / Package Author",
-    "email": "user@company.com",
-    "url": "http://www.yourcompanyname.com"
+    "name": "Galal Hassan",
+    "email": "hello@galalhassan.com",
+    "url": "https://galalhassan.com"
   },
   "samples": [
     {
@@ -19,4 +19,3 @@
   "dependencies": {
   }
 }
-  
