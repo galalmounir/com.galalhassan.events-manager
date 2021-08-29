@@ -11,9 +11,9 @@
   },
   "samples": [
     {
-      "displayName": "Template Sample",
-      "description": "Contains a sample of how to use this package.",
-      "path": "Samples~/Example1"
+      "displayName": "Usage Example",
+      "description": "Contains an example of how to use the Events Manager System.",
+      "path": "Samples~/Usage Example"
     }
   ],
   "dependencies": {
