@@ -1,7 +1,9 @@
 {
-    "name": "CompanyName.PackageName.Editor",
-    "rootNamespace": "CompanyName.PackageName",
-    "references": [],
+    "name": "GalalHassan.EventsManager.Editor",
+    "rootNamespace": "GalalHassan.EventsManager",
+    "references": [
+        "GalalHassan.EventsManager.Runtime"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

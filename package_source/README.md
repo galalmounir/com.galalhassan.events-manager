@@ -1,73 +1,43 @@
-# Custom Unity Package Template
-This is a starter project to accelerate creating unity packages.
+# Events Manager System
 
-## How to create a new package
-There are a few things you need you do to use this repository to create a new package.
+## Overview
+The events manager is a system to streamline messaging between different components in Unity.
 
-### Fork this repository
-Feel free to fork (or clone) this repository and use it under the MIT license.
+## Usage Instructions
+There are two different parts to using the events manager. Triggering an event, and Listening to an event.
 
-### Modifying the template
-There are a few things that need to be modified when creating a new package from this template.
-However, before you start, you need to clone your repository and open it in Unity.
+### Triggering an event
+To trigger an event, a GameEvent asset needs to exist first.
+- To create a GameEvent asset, right-click anywhere inside your `Assets` folder then choose `Create->Events->Game Event`
+- Rename the newly created asset to reflect the event name required.
 
-#### Reset all file GUIDs
-If you use this template, a GUID is already assigned in the `meta` file for each of the package files/directories. To avoid conflicts with other packages created using this template, you will need to regenerate new GUIDs for all the files/directories. 
+Once the GameEvent asset is created, you can trigger the event anywhere in your code-base by calling the following function:
+```c#
+EventsManager.RaiseEvent(string event_name, EventParameters params);
+```
+Triggered events can carry a payload. The `EventParameter` class currently supports an `int` and `GameObject` payloads.
 
-To regenerate the package GUIDs, you can use the editor script `UnityGUIDRegenerator.cs`. To use this script go to `Tools/Regenerate Package GUIDs`.
+To trigger an event for level 5 started, an example can be as follows:
+```c#
+var eventParameters = new EventParameters(5, gameObject);
+EventsManager.RaiseEvent("LEVEL_STARTED", eventPayload);
+```
 
-#### The `package_source/package.json` file:
-- Rename the package to match your repository name
-- Make sure the version number is `0.0.1` since this will be the first release of the package.
-- Change the `displayName` to match the name you want displayed for your package.
-- Change the `description` to describe what your package does.
-- Add any dependencies your package will depend on. (Note: do not add more dependencies than you need)
+### Listening on an event
+To listen to an event, attach the `EventListener` script to any `GameObject` and assign the event(s) to listen to.
+You will also need to add some actions to take place once the event is triggered.
 
-#### The `Packages/manifest.json` file:
-- Modify the package name under `dependencies` to match your new package name
-- Modify the package name under `testables` to match your new package name 
+## Limitations
+- The event manager currently only supports `int` and `GameObject` payloads, however, will support more types in the future.
+- Listening on events is currently only supported using the editor.
 
-#### The `README.md` file:
-- Change this file to have any instructions on how to use your repository.
-Note: This should not describe how to use the package, this is only for the repository.
-  
-#### The `CHANGELOG.md` file:
-- Update the log to have an entry for each new version you release for the package.
+## References
+This package is based on the work of [Ryan Hipple](https://github.com/roboryantron/Unite2017/blob/master/Assets/Code/Events/GameEvent.cs) for Unite 2017.
 
-#### The `Documentation~/index.md` file:
-- Update the documentation to describe how your package can be used.
-Note: This should describe how a user would use your package.
-  
-#### The `Runtime` folder:
-- This is where any runtime scripts for your package would live.
+## Samples
+There is a `Usage Example` demo scene that illustrates how to use the package.
 
-#### The `Editor` folder:
-- This is where any editor scripts for your package would live.
-
-#### The `Runtime/CompanyName.PackageName.Runtime.asmdef` file:
-- Make sure the name of this file matches your package. (Use camelcase)
-- Make sure the name inside this file matches the name of the file.
-- Make sure the `rootNamespace` matches the root namespace of your package.
-
-#### The `Runtime/CompanyName.PackageName.Editor.asmdef` file:
-- Make sure the name of this file matches your package. (Use camelcase)
-- Make sure the name inside this file matches the name of the file.
-- Make sure the `rootNamespace` matches the root namespace of your package.
-
-#### The `Tests/Runtime` folder:
-- This is where all runtime tests for your package would live.
-
-#### The `Tests/Editor` folder:
-- This is where all editor tests for your package would live.
-
-#### The `Runtime/CompanyName.PackageName.Runtime.asmdef` file:
-- Make sure the name of this file matches your package. (use camelcase)
-- Make sure the name inside this file matches the name of the file.
-- Make sure the `rootNamespace` matches the root namespace of your package.
-- Make sure the `references` has any references to assemblies you want to test.
-
-#### The `Runtime/CompanyName.PackageName.Editor.asmdef` file:
-- Make sure the name of this file matches your package. (use camelcase)
-- Make sure the name inside this file matches the name of the file.
-- Make sure the `rootNamespace` matches the root namespace of your package.
-- Make sure the `references` has any references to assemblies you want to test.
+## Document revision history
+|Date|Reason|
+|---|---|
+|September 1, 2021|Document created. Matches package version 1.0.0|

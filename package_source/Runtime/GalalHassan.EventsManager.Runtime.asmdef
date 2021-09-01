@@ -1,6 +1,6 @@
 {
-    "name": "CompanyName.PackageName.Runtime",
-    "rootNamespace": "CompanyName.PackageName",
+    "name": "GalalHassan.EventsManager.Runtime",
+    "rootNamespace": "GalalHassan.EventsManager",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -1,22 +1,21 @@
 {
-  "name": "com.companyname.packagename",
-  "version": "0.0.1",
-  "displayName": "Package Name Goes Here",
-  "description": "A Description for the Package goes here",
+  "name": "com.galalhassan.events-manager",
+  "version": "1.0.0",
+  "displayName": "Events Manager",
+  "description": "An Events Manager Package for reuse in different projects.",
   "unity": "2021.1",
   "author": {
-    "name": "Company Name / Package Author",
-    "email": "user@company.com",
-    "url": "http://www.yourcompanyname.com"
+    "name": "Galal Hassan",
+    "email": "hello@galalhassan.com",
+    "url": "https://galalhassan.com"
   },
   "samples": [
     {
-      "displayName": "Template Sample",
-      "description": "Contains a sample of how to use this package.",
-      "path": "Samples~/Example1"
+      "displayName": "Usage Example",
+      "description": "Contains an example of how to use the Events Manager System.",
+      "path": "Samples~/Usage Example"
     }
   ],
   "dependencies": {
   }
 }
-  
