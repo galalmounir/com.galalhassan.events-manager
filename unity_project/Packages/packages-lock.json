@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.galalhassan.events-manager": {
-      "version": "file:../package_source",
+      "version": "file:../../package_source",
       "depth": 0,
       "source": "local",
       "dependencies": {}
