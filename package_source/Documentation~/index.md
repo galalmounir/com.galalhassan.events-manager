@@ -40,4 +40,4 @@ There is a `Usage Example` demo scene that illustrates how to use the package.
 ## Document revision history
 |Date|Reason|
 |---|---|
-|September 1, 2021|Document created. Matches package version 0.0.1|
+|September 1, 2021|Document created. Matches package version 1.0.0|
