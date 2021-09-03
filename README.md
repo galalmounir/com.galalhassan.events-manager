@@ -1,3 +1,5 @@
+<img alt="GitHub" src="https://img.shields.io/github/license/galalmounir/com.galalhassan.events-manager?style=for-the-badge">
+
 # About
 The events manager is a system to streamline messaging between different components in Unity.
 
